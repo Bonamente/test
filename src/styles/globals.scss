@@ -16,6 +16,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: $font-Lato;
+  font-weight: 400;
 }
 
 a {
@@ -32,6 +33,12 @@ h6,
 p {
   margin-top: 0;
   margin-bottom: 0;
+}
+
+ul, ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 input {
@@ -72,4 +79,17 @@ input[type='number'] {
     background-color: $color-default-black;
     border-radius: 24px;
   }
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }

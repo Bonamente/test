@@ -4,3 +4,8 @@
   line-height: 14px;
   font-weight: $fw-regular;
 }
+
+@mixin transition {
+  transition: all 0.3s ease-out;
+}
+
