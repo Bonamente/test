@@ -1,0 +1,71 @@
+@use "styles/style" as *;
+
+.shopHours {
+  display: flex;
+  flex-direction: column; 
+
+  color: $color-default-white;
+}
+
+.title {
+  position: relative;
+  
+  margin-left: 40px;
+  margin-bottom: 5px;
+  
+  font-size: $fs-6;
+  font-weight: 400;
+  line-height: 25px;
+
+  @include tablet {
+    margin-left: unset;    
+
+    font-size: $fs-4;
+    line-height: 26px;   
+  }
+}
+
+.weekdays {
+  margin-bottom: 4px;
+  @include tablet {
+    margin-bottom: unset;
+  }
+}
+
+.weekdays,
+.weekend {
+  font-size: $fs-6; 
+
+  @include tablet {
+    font-size: $fs-5;
+    line-height: 21px;  
+  }
+}
+
+.svgWrapper {  
+  position: absolute;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  top: 5px;
+  left: -29px;
+
+  width: 15px;
+  height: auto;
+
+  @include tablet {
+    top: 0;
+    left: -34px;
+
+    width: 23px;
+    height: auto;     
+  }
+
+  svg {
+    @include transition;
+  
+    fill: $color-primary;
+  }
+}
