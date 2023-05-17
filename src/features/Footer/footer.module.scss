@@ -1,6 +1,42 @@
 @use "styles/style" as *;
 
 .footer {
-  background-color: #444444;
-  color: green;
+  display: flex; 
+
+  background-color: $color-grey; 
+  color: $color-default-white;
+
+  @include mobile {
+    min-height: 250px;
+  }
+  
+  @include tablet {
+    min-height: 223px;
+  } 
+}
+
+.footerContent {
+  @include container;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+
+  @include tablet {
+    flex-direction: row;
+    margin-top: 62px;
+  }
+}
+
+.footerLogo {
+  display: none;
+
+  @include tablet {
+    display: flex;
+
+    width: 101px;
+    height: 111.64px; 
+  }
+
 }
