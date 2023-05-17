@@ -1,0 +1,70 @@
+@use "styles/style" as *;
+
+.contactsWrapper {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+
+  @include tablet {
+    flex-direction: row;
+    justify-content: space-around;
+
+    width: 80%;
+    padding-top: 7px;    
+  }
+
+  @include desktop {
+    width: 61.6%;
+
+    .columnLeft {
+      margin-right: 38.8%;
+    }
+  }
+
+  .addressWrapper {
+    margin-bottom: 17px;
+  }
+
+  &.tablet {
+    display: none;
+  
+    @include tablet {
+      display: flex;
+    }
+  }
+}
+
+.contactsWrapperMobile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100%;
+
+  @include tablet {
+    display: none;
+  }
+}
+
+.contactPhoneWrapper {
+  padding-top: 24px;
+  padding-bottom: 29px;
+}
+
+.shopHoursWrapper {
+  display: flex;
+  justify-content: center;
+
+  width: 100%;
+  padding-top: 17px;
+  padding-bottom: 31px;
+
+  border-top: 1px solid #BDBDBD;
+  border-bottom: 1px solid #BDBDBD;
+}
+
+.addressWrapperMobile {
+  padding-top: 20px;  
+}
+
+
