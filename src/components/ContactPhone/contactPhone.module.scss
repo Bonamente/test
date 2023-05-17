@@ -1,0 +1,111 @@
+@use "styles/style" as *;
+
+.phone {
+  display: flex;
+  align-items: center;
+}
+
+.phoneLink {
+  @include transition;
+
+  position: relative;
+
+  outline: none;
+
+  &.large {
+    padding-left: 22px;
+
+    font-size: $fs-5;
+    line-height: 19px;
+  
+    @include tablet {
+      padding-left: 36px;
+
+      font-size: $fs-2;
+      line-height: 24px;   
+    }
+  }
+
+  &.small {
+    padding-left: 22px;
+
+    font-size: $fs-5;
+    line-height: 19px;
+
+    @include tablet {
+      padding-left: 36px;
+
+      line-height: 21px;   
+    }
+  }
+  
+  &.dark {
+    color: $color-grey;
+
+    &:hover,
+    &:focus {
+      color: $color-blue-dk;
+  
+      svg {
+        fill: $color-primary-lt;
+      }
+    }
+  
+    &:active {
+      color: $color-grey-dk;   
+  
+      svg {
+        fill: $color-primary-dk;      
+      }
+    }
+  }
+
+  &.light {
+    color: $color-default-white;
+  }  
+
+  .svgWrapper {  
+    position: absolute;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &.large {
+      top: 3px;
+      left: 0;
+
+      width: 16.84px;
+      height: auto;
+  
+      @include tablet {
+        top: -2px;
+
+        width: 28.16px;
+        height: auto;     
+      }    
+    }
+
+    &.small {
+      top: 0;
+      left: -3px;
+
+      width: 14px;
+      height: auto;
+  
+      @include tablet {
+        top: -6px;
+
+        width: 24px;
+        height: auto;     
+      }    
+    }
+  }
+
+  svg {
+    @include transition;
+
+    fill: $color-primary;
+  }
+}
+
