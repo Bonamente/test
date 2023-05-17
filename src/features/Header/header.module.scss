@@ -1,6 +1,93 @@
 @use "styles/style" as *;
 
 .header {
-  background-color: #464646;
-  color: green;
+  display: flex;
+ 
+  background-color: $color-default-white;
+  color: $color-grey;
+
+  @include mobile {
+    min-height: 58px;
+  }
+  
+  @include tablet {
+    min-height: 136px;
+  } 
+}
+
+.headerContent {
+  @include container;
+
+  display: flex;
+  align-items: center;
+  height: 100%;
+
+  @include mobile {
+    justify-content: space-between;
+    margin-top: 6px;
+  }
+
+  @include tablet {
+    margin-top: 20px;
+  } 
+}
+
+.headerLogo {
+  display: flex;
+
+  @include mobile {
+    width: 32.98px;
+    height: 36.46px;
+  }
+
+  @include tablet {
+    width: 82.74px;
+    height: 91.46px;
+  }
+}
+
+.navWrapper {
+  display: none;
+
+  @include tablet {
+    display: block;
+  }
+
+  @include desktop {
+    margin-left: 16.8%;
+    margin-right: 6.2%;
+  } 
+}
+
+.callbackBtn {
+  display: none;
+
+  @include transition;
+
+  padding: 15px 55px;
+
+  @include desktop {
+    display: flex;
+    margin-left: auto;
+  }
+
+  font-size: $fs-2;
+  line-height: 24px;
+
+  border: 1px solid $color-blue;
+  border-radius: 10px;
+  background-color: transparent;  
+
+  outline: none;
+  
+  &:hover,
+  &:focus {
+    color: $color-default-white;
+    background-color: $color-blue;    
+  }
+
+  &:active {
+    background-color: $color-blue-dk;
+    border-color: $color-blue-dk;
+  }
 }
