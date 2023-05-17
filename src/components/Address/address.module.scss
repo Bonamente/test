@@ -1,0 +1,52 @@
+@use "styles/style" as *;
+
+.address {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  padding-left: 22px;
+
+  font-size: $fs-6;
+  line-height: 25px;
+
+  @include tablet {
+    padding-left: 36px;
+
+    font-size: $fs-5;
+    line-height: 21px;   
+  }
+
+  color: $color-default-white;
+}
+
+.svgWrapper {  
+  position: absolute;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  top: 5px;
+  left: -1px;
+
+  width: 11px;
+  height: auto;
+
+  @include tablet {
+    top: -4px;
+    left: 1px;
+
+    width: 18.95px;
+    height: auto;     
+  }
+
+  svg {
+    @include transition;
+  
+    fill: $color-primary;
+  }
+}
+
+
