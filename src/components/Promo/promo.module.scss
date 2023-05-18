@@ -1,0 +1,228 @@
+@use "styles/style" as *;
+
+.promo {
+  width: 100%;
+   
+  color: $color-default-white;
+  background-color: $color-primary;
+}
+
+.promoWrapper {
+  @include container;
+
+  position: relative;
+  min-height: 453px;  
+
+  background-image: url('/assets/images/promo-mobile.png');
+  background-repeat: no-repeat;
+  background-size: 95.3% auto;
+  background-position: bottom -3px center;
+
+  @media screen and (min-width: 400px) {
+    background-size: 80% auto;
+  }
+
+  @media screen and (min-width: 500px) {
+    background-size: 60% auto;
+  }
+
+  @media screen and (min-width: 630px) {
+    background-size: 50% auto;
+  }
+  
+  @include tablet {
+    background-image: url('/assets/images/promo.png');
+    background-size: 64.5% auto;
+    background-position: bottom -3px right -16px;
+  }
+  
+  @include laptop {
+    min-height: 536px;
+  }
+}
+
+.promoContent {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+
+  padding-top: 20px;
+
+  text-align: center;
+
+  @include tablet {
+    left: 20px;
+    transform: translateX(0);
+
+    max-width: 430px;
+    padding-top: 60px;
+
+    text-align: unset;
+
+    .mobileText {
+      display: none;  
+    }
+  }
+
+  @include laptop {
+    left: 30px;
+  }
+
+  @include desktop {
+    left: -2px; 
+
+    max-width: 630px;
+    padding-top: 79px;
+  }
+}
+
+.promoText {
+  font-size: $fs-5;
+  line-height: 19px;
+
+  margin-bottom: 13px;
+
+  @include tablet {
+    margin-bottom: 4px;
+  }
+
+  @include desktop {
+    font-size: $fs-4;
+    line-height: 26px;
+  }
+}
+
+.promoTitle {
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 25px;
+
+  @include tablet {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.10;
+  }
+
+  @include desktop {
+    font-size: 45px;
+    font-weight: 700;
+    line-height: 1.10;
+  }
+}
+
+.topTextFrame {
+  display: inline-flex;
+  align-items: center;
+
+  margin-left: 6px; 
+
+  @include tablet { 
+    height: 32px;
+
+    padding-bottom: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 4px; 
+  
+    border: 1px solid $color-default-white;
+    border-radius: 20px;
+  }
+
+  @include desktop { 
+    height: 53px;
+
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 14px;
+    margin-left: 8px; 
+  
+    border: 1px solid $color-default-white;
+    border-radius: 20px;
+  }
+}
+
+.bottomTextFrame {
+  display: inline-flex;
+  align-items: center;
+
+  height: 22px;
+  padding-left: 3px;
+  padding-right: 3px;
+  padding-bottom: 6px; 
+  margin-left: 3px;
+
+  border: 1px solid $color-default-white;
+  border-radius: 10px;
+
+  @include tablet { 
+    height: 32px;
+
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-bottom: 8px;
+    margin-top: 4px;
+    margin-left: 3px;  
+    
+    border-radius: 20px;
+  }
+
+  @include desktop { 
+    height: 53px;
+  
+    padding-left: 13px;
+    padding-right: 13px;
+    padding-bottom: 6px;
+    margin-top: 7px;
+    margin-left: 5px;  
+  }
+}
+
+.promoLink {
+  @include transition;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 48px;
+  min-width: 320px;
+  margin-top: 36px;
+  
+  font-size: $fs-3;
+  font-weight: 400;
+  line-height: 25px;
+  color: $color-grey;
+  background-color: $color-default-white;
+  
+  border-radius: 20px;
+  outline: none;
+  cursor: pointer;
+
+  @include tablet {
+    height: 52px;
+    width: 300px;
+    margin-top: 33px;
+
+    font-weight: 700;
+    font-size: $fs-1;
+    line-height: 28px;
+
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px #A1303C;
+
+    &:hover,
+    &:focus {
+      background-color:  #FAFEFF;      
+    }
+
+    &:active {
+      background-color: #F7FDFF;
+    }
+  }
+
+  @include desktop {
+    height: 72px;
+    width: 400px;
+    margin-top: 43px;
+  }
+}
