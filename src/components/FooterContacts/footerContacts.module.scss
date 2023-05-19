@@ -13,11 +13,11 @@
     padding-top: 7px;    
   }
 
-  @include desktop {
-    width: 61.6%;
+  @include desktop {   
+    width: 70.2%;
 
     .columnLeft {
-      margin-right: 38.8%;
+      margin-right: 10%;
     }
   }
 
@@ -57,7 +57,7 @@
 
   width: 100%;
   padding-top: 17px;
-  padding-bottom: 31px;
+  padding-bottom: 29px;
 
   border-top: 1px solid #BDBDBD;
   border-bottom: 1px solid #BDBDBD;
