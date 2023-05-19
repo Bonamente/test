@@ -1,0 +1,14 @@
+@use "styles/style" as *;
+
+.card {
+  position: relative;
+
+  width: 224px;
+  height: 231px;
+  
+  @include desktop {
+    width: 380px;
+    height: 405px;
+  }
+ 
+}
